@@ -74,6 +74,7 @@ const AppContextProvider = ({children}) => {
                         selectedCategory:'',
                         selectedCuisine:'', 
                         searchText:'',
+                        recipeName:'',
                         filteredItems:[],
                         savedRecipes:[]
                        }

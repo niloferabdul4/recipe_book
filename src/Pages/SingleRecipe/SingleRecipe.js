@@ -42,12 +42,12 @@ const SingleRecipe = () => {
                         </Span>
                         <Ingredients> Ingredients:
                           <ul>
-                              <li>{singleRecipe[0]?.strIngredient1}</li>
-                              <li>{singleRecipe[0]?.strIngredient2}</li>
-                              <li>{singleRecipe[0]?.strIngredient2}</li>
-                              <li>{singleRecipe[0]?.strIngredient4}</li>
-                              <li>{singleRecipe[0]?.strIngredient5}</li>
-                              <li>{singleRecipe[0]?.strIngredient6}</li>
+                              <li>{singleRecipe[0]?.strIngredient1}: {singleRecipe[0]?.strMeasure1}</li>
+                              <li>{singleRecipe[0]?.strIngredient2}: {singleRecipe[0]?.strMeasure2}</li>
+                              <li>{singleRecipe[0]?.strIngredient2}: {singleRecipe[0]?.strMeasure3}</li>
+                              <li>{singleRecipe[0]?.strIngredient4}: {singleRecipe[0]?.strMeasure4}</li>
+                              <li>{singleRecipe[0]?.strIngredient5}: {singleRecipe[0]?.strMeasure5}</li>
+                              <li>{singleRecipe[0]?.strIngredient6}: {singleRecipe[0]?.strMeasure6}</li>
                           </ul>
                        
                         </Ingredients>

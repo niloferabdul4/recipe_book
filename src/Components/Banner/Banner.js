@@ -1,12 +1,12 @@
 import React,{useContext} from 'react';
-import { BannerContainer,SubTitle,FilterBox,Input,Button,Label,Select,FilterOption,Bottom,Form,Top} from './style';
+import { BannerContainer,SubTitle,FilterBox,Input,Button,Label,Select,FilterOption,Bottom,Form,Top,SearchButton} from './style';
 import {  useNavigate } from 'react-router-dom';
 import { AppContext } from '../../Context/AppContextProvider';
-
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 const Banner = () => {
 
-  const {state:{recipes,selectedCategory,selectedCuisine,searchText},dispatch}=useContext(AppContext)
+  const {state:{recipes,selectedCategory,selectedCuisine,searchText,recipeName},dispatch}=useContext(AppContext)
  
   const catg=[{id:1,title:'select'},{id:2,title:'Dessert'},{id:3,title:'Seafood'},{id:4,title:'Beef'},{id:5,title:'Chicken'},
   {id:6,title:'Vegetarian'},{id:7,title:'Pasta'},{id:8,title:'Goat'}]
@@ -20,12 +20,20 @@ const Banner = () => {
 const applyFilters=async(event)=>
 {
   event.preventDefault();
-  const filteredItems=recipes?.filter(item=>(item.strCategory===selectedCategory && item.strArea===selectedCuisine && item.strMeal.includes(searchText) ))
+  const filteredItems=recipes?.filter(item=>(item.strCategory===selectedCategory && item.strArea===selectedCuisine && item.strMeal.toLowerCase().includes(recipeName.toLowerCase() ))  )
   dispatch({type:'FILTERED_RECIPES',payload:filteredItems})
   navigate('/recipe')
 }
   
 
+const searchItem=async()=>
+{
+  const filteredItems=recipes?.filter(item=>item.text.toLowerCase().includes(searchText.toLowerCase()))
+  console.log(filteredItems)
+  dispatch({type:'FILTERED_RECIPES',payload:filteredItems})
+  navigate('/recipe')
+}
+  
     return (
         <>
         <BannerContainer>            
@@ -47,12 +55,21 @@ const applyFilters=async(event)=>
               </Select>
             </FilterBox>
             <FilterBox>
-              <Label>Search By Name,Ingredients.. </Label>
-              <Input type='text' placeholder='Search here...' onChange={(event)=>dispatch({type:'SEARCH_TEXT',payload:event.target.value})}/>
+              <Label>Search By Name </Label>
+              <Input type='text' value={recipeName} placeholder='recipe name....' onChange={(event)=>dispatch({type:'ADD_NAME',payload:event.target.value})}/>
             </FilterBox>
             </Top> 
             <Bottom>
            <Button type='submit'>Apply Filters</Button>
+           <FilterBox > 
+                <Label>Advanced Search</Label>                             
+               
+                <SearchButton onClick={searchItem}>
+                <Input type='search' id='search' value={searchText}  onChange={(event)=>dispatch({type:'SEARCH_TEXT',payload:event.target.value})} />
+                    <SearchOutlinedIcon size={20} />
+                </SearchButton>                            
+                
+              </FilterBox>          
            </Bottom>
           </Form>  
         </BannerContainer>

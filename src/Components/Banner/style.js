@@ -90,7 +90,7 @@ const FilterOption=styled.option`
   const Input=styled.input`
     font-size: 16px;
     padding: 10px;
-    border: 1px solid rgba(128, 128, 128, 0.2);
+    border: ${props=>props.id=='search'? 'none' : '1px solid rgba(128, 128, 128, 0.2)'};
     margin: 10px;
     width:100%;
     border-radius: 5px;
@@ -98,7 +98,21 @@ const FilterOption=styled.option`
     ${mobile({ margin:'0px',padding:'8px'})}
   
   `
-
+  const SearchButton=styled.button`
+    width:50%;
+    margin:0px 30px;
+    color:#2874f0;
+    padding:0px;
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    border:1px solid rgba(128, 128, 128, 0.2);
+    background-color:white;
+    &:focus{
+      boder:none;
+    }
+    ${mobile({height:'20px',padding:'6px'})}
+`
  const Label=styled.label`
     font-size: 16px;
     margin:10px;
@@ -129,5 +143,5 @@ const SubTitle=styled.h2`
 
 
 
-export {BannerContainer,Form,Top,Bottom,FilterBox,FilterOption,Select,Input,Label,Button,Title,SubTitle}
+export {BannerContainer,Form,Top,Bottom,FilterBox,FilterOption,Select,Input,Label,Button,Title,SubTitle,SearchButton}
 

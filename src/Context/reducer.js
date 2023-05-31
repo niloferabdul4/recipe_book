@@ -13,8 +13,10 @@ const reducer=(state,action)=>{
             return {...state,selectedCategory:action.payload}
         case 'SELECT_CUISINE':
                 return {...state,selectedCuisine:action.payload}
+        case 'ADD_NAME':
+                return {...state,recipeName:action.payload}
         case 'SEARCH_TEXT':
-                return {...state,selectedCuisine:action.payload}
+                return {...state,searchText:action.payload}
         case 'FILTERED_RECIPES':
              return {...state,filteredItems:action.payload}
         case 'SAVE_THE_RECIPE':

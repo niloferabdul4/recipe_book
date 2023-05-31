@@ -3,7 +3,7 @@ import { mobile } from "../../Responsive";
 
 export const CategoryContainer=styled.div`
        
-        background-color: rgba(0, 0, 0, 0.10);
+        
         margin:50px 100px;;
         border-radius: 3px;
         display:grid;
