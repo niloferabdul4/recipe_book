@@ -37,7 +37,7 @@ const Form=styled.form`
     gap:5px;
     z-index:10;
     box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%); 
-    ${mobile({ width:'355px',margin:'10px 0px',padding:'20px',height:'500px',gap:'5px'})}
+    ${mobile({ width:'355px',margin:'30px 0px',padding:'20px',height:'450px',gap:'10px'})}
   `
 const Top=styled.div`
     display:flex;
@@ -120,11 +120,6 @@ const FilterOption=styled.option`
     ${mobile({ margin:'10px',fontSize:'14px'})}
  `
 
-const Title=styled.h1`
-    margin:50px;
-    ${mobile({ fontSize:'24px',margin:'30px'})}
-`
-
 const Button=styled.button`
     height:50px;
     width:140px;
@@ -146,16 +141,16 @@ const SearchBox=styled.div`
         justify-content:flex-start;
         ${mobile({
         height:'24px',    
-       
+        margin:'10px 0px'
     })}
 `
 const SubTitle=styled.h2`
-    margin:30px;
+    margin:20px;
     color:${props=>props.id==='banner'? 'white' :'black'}
-    ${mobile({ fontSize:'18px',margin:'22px'})}
+    ${mobile({ fontSize:'18px',margin:'15px'})}
 `
 
 
 
-export {BannerContainer,Form,Top,Bottom,FilterBox,FilterOption,Select,Input,Label,Button,Title,SubTitle,SearchButton,SearchBox}
+export {BannerContainer,Form,Top,Bottom,FilterBox,FilterOption,Select,Input,Label,Button,SubTitle,SearchButton,SearchBox}
 
