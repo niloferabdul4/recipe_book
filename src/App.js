@@ -1,6 +1,5 @@
 
 import './App.css';
-import Header from './Components/Header/Header';
 import Home from './Pages/Home/Home';
 import { Routes,Route } from 'react-router-dom';
 import SingleRecipe from './Pages/SingleRecipe/SingleRecipe';
@@ -10,7 +9,7 @@ import Login from './Pages/Login/Login';
 import { useContext } from 'react';
 import { AppContext } from './Context/AppContextProvider';
 import Profile from './Pages/ProfilePage/Profile';
-import Sidebar from './Components/Sidebar/Sidebar';
+
 import RecipeList from './Pages/RecipeList/RecipeList';
 import FilteredRecipes from './Pages/FilteredRecipes/FilteredRecipes';
 
@@ -19,8 +18,7 @@ function App() {
   const {state:{user}}=useContext(AppContext)
   return (
     <div className="App">
-        <Header/>
-        <Sidebar/>
+      
         <Routes>
             <Route path='/' element={user ? <Home /> :<Register />} />           
             <Route path='/category/:category' element={<RecipeList/>} />

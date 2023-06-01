@@ -64,18 +64,7 @@ const validate=(formData)=>
             <Wrapper>
                <Title>Create Acccount</Title>
                <Form onSubmit={handleSubmit}>
-                        <InputWrapper>
-                                <Label htmlFor='name'>Name</Label>
-                                <Input type='text'
-                                        id='name'
-                                        placeholder='Name'
-                                        value={formData.Name}
-                                        name='Name'
-                                        onChange={handleChange}
-                                 />                                                                   
-                               
-                           <ToastContainer/>      
-                        </InputWrapper>
+                       
                         <InputWrapper>
                                 <Label htmlFor='email'>Email</Label>
                                 <Input type='text'

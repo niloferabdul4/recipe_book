@@ -8,10 +8,11 @@ export const ProfileContainer=styled.div`
     flex-direction:column;
     justify-contentflex-start;
     align-items:flex-start;
-    
+    ${mobile({paddin:'0px',margin:'0px'})}
 `
 export const ProfileHeader=styled.h2`
     margin:10px ;
+    ${mobile({fontSize:'19px'})}
 `
 
 
@@ -22,6 +23,7 @@ export const UserInfo=styled.h3`
     flex-direction:column;
     justify-content:flex-start;
     align-items:flex-start;
+    ${mobile({fontSize:'15px'})}
 
 `
 
@@ -32,6 +34,7 @@ export const Container=styled.div`
     z-index: 1;   
     margin:20px 120px;   
     width:100%; 
+    ${mobile({ margin:'10px 6px',gridGap:'10px'})}  
 `
 
   export const BackButton=styled.button`

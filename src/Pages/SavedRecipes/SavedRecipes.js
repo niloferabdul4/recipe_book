@@ -5,6 +5,8 @@ import { SubTitle } from '../../Components/Categories/style'
 import { Container } from '../RecipeList/style'
 import { useNavigate } from 'react-router-dom'
 import { BackButton } from '../ProfilePage/style'
+import Header from '../../Components/Header/Header'
+import Sidebar from '../../Components/Sidebar/Sidebar'
 
 const SavedRecipes = () => {
 
@@ -12,6 +14,8 @@ const SavedRecipes = () => {
     const navigate=useNavigate()
   return (
     <div>
+       <Header/>
+       <Sidebar/>
        {savedRecipes?.length>0 ? (<SubTitle>Saved Recipes</SubTitle>): 
        (
         <>

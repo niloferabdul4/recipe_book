@@ -1,5 +1,5 @@
 import React,{useContext} from 'react';
-import { BannerContainer,SubTitle,FilterBox,Input,Button,Label,Select,FilterOption,Bottom,Form,Top,SearchButton,SearchBox} from './style';
+import { BannerContainer,FilterBox,Input,Button,Label,Select,FilterOption,Bottom,Form,Top,SearchButton,SearchBox} from './style';
 import {  useNavigate } from 'react-router-dom';
 import { AppContext } from '../../Context/AppContextProvider';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
@@ -39,7 +39,7 @@ const searchItem=async()=>
     return (
         <>
         <BannerContainer>            
-          <SubTitle id='banner'>Search the yummy recipes here..</SubTitle> 
+         
           <Form onSubmit={applyFilters}>
             <Top>
             

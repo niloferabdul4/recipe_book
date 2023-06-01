@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { AppContext } from '../../Context/AppContextProvider'
+import Header from '../../Components/Header/Header'
+import Sidebar from '../../Components/Sidebar/Sidebar'
 import { Container,ImageContainer,Image,InfoContainer,Title,Description,Ingredients,Span,Source,SaveBtn} from './style'
 const SingleRecipe = () => {
   const [singleRecipe,setSingleRecipe]=useState({})
@@ -31,6 +33,8 @@ const SingleRecipe = () => {
 
   return (
     <div>
+       <Header/>
+       <Sidebar/>
        <Container  >                 
                 <ImageContainer>
                     <Image src={singleRecipe[0]?.strMealThumb} alt='' />                    

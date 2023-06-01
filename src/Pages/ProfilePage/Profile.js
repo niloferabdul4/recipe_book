@@ -3,6 +3,8 @@ import { AppContext } from '../../Context/AppContextProvider'
 import { SubTitle } from '../../Components/Categories/style'
 import SavedCard from '../SavedRecipes/SavedCard'
 import { useNavigate } from 'react-router-dom'
+import Header from '../../Components/Header/Header'
+import Sidebar from '../../Components/Sidebar/Sidebar'
 import { ProfileContainer,ProfileHeader,Image,UserInfo,Container,BackButton} from './style'
 
 
@@ -12,6 +14,8 @@ const Profile = () => {
 
   return (
     <>
+        <Header/>
+       <Sidebar/>
              <ProfileContainer>
       <ProfileHeader>Profile Information:</ProfileHeader>
    

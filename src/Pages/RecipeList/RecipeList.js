@@ -4,6 +4,8 @@ import { AppContext } from '../../Context/AppContextProvider'
 import RecipeCard from './RecipeCard'
 import { Container } from './style'
 import { SubTitle } from '../../Components/Categories/style'
+import Header from '../../Components/Header/Header'
+import Sidebar from '../../Components/Sidebar/Sidebar'
 
 const RecipeList = () => {
    const {state:{selectedCategory,recipeByCategory,recipes},dispatch}=useContext(AppContext)
@@ -21,7 +23,8 @@ const RecipeList = () => {
  }
   return (
     <>
-    
+     <Header/>
+      <Sidebar/>
     {recipeByCategory?.length>0 ? (<SubTitle>{selectedCategory} Dishes</SubTitle>): (<h2 style={{color:'#5A5A5A',margin:'50px'}}>No Recipes To Show</h2>)}
     <Container>
       {recipeByCategory?.map(item=>{return <RecipeCard key={item.idMeal}   recipe={item} />})}
