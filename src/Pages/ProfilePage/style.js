@@ -48,7 +48,7 @@ export const Container=styled.div`
     cursor: pointer;
     border:none;
     background: linear-gradient(right bottom rgba(0,0,1,2));
-    ${mobile({height:'30px',fontSize:'0.95rem',margin:'10px'})}
+    ${mobile({height:'35px',width:'50%',fontSize:'0.95rem',margin:'10px'})}
 
 
   `

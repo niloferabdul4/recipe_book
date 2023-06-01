@@ -11,9 +11,10 @@ export const HeaderContainer=styled.div`
     top: 0;
     display:flex;
     flex-direction:row;
+    justify-content:space-between
     padding:0px 20px;
     z-index:100;
-    ${mobile({ height:'50px', margin:'0px',width:'100%'})}   
+    ${mobile({ height:'50px', margin:'0px',width:'100%',padding:'0px 10px'})}   
 
  
 
@@ -28,7 +29,7 @@ export const LeftWrapper=styled.div`
     gap:20px;
     margin-left:30px;
     color:white;
-    ${mobile({flex:'0.3',marginLeft:'2px',fontSize:'16px'})}
+    ${mobile({flex:'0.3',marginLeft:'2px',fontSize:'16px',gap:'4px'})}
 
 `
 export const RightWrapper=styled.div`
@@ -38,7 +39,8 @@ export const RightWrapper=styled.div`
     align-items: center;
     justify-content: space-around;
     color:white;
-    ${mobile({ marginRight:'2px',justifyContent:'flex-end'})}
+    width:100%;
+    ${mobile({ marginRight:'0px',justifyContent:'space-betwwen'})}
 `
 
 export const Logo=styled.h2`
@@ -57,6 +59,21 @@ export const Links=styled(NavLink)`
     font-size: 18px;
     text-decoration: none;
    color:white;
+    cursor:pointer;
+    ${mobile({ fontSize:'15px'})}
+    &:hover{
+        transform:scale(1.1);
+        transition: transform  ease 0.5s; 
+       
+    }
+    
+`
+
+
+export const NavLinks=styled(NavLink)`
+    font-size: 18px;
+    text-decoration: none;
+    color:white;
     cursor:pointer;
     ${mobile({ display:'none'})}
     &:hover{

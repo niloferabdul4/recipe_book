@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import './style'
-import { HeaderContainer,Logo,LeftWrapper,RightWrapper,Links} from './style'
+import { HeaderContainer,Logo,LeftWrapper,RightWrapper,Links,NavLinks} from './style'
 import { signOut } from 'firebase/auth'
 import auth from '../../Firebase/Firebase'
 import { useNavigate } from 'react-router-dom'
@@ -32,7 +32,7 @@ const logoutFn=()=>{
               </LeftWrapper>
               <RightWrapper>
                 {lists.map(item=>{return <>
-                  <Links to={item.path}>{item.title}</Links>
+                  <NavLinks to={item.path}>{item.title}</NavLinks>
                 
                 </>})}
                 {!user?
@@ -45,7 +45,7 @@ const logoutFn=()=>{
                     :
                     (<Links  to='/login' onClick={logoutFn}>Logout</Links>)
                    }  
-                    <MenuIcon   style={{cursor:'pointer'}} onClick={()=>dispatch({type:'SHOW_MENUBAR'})}/>    
+                    <MenuIcon style={{cursor:'pointer',marginRight:'0px'}} onClick={()=>dispatch({type:'SHOW_MENUBAR'})}/>    
               </RightWrapper>      
       </HeaderContainer>    
     </>

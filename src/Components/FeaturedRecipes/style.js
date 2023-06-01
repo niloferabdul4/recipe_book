@@ -37,7 +37,7 @@ export const RecipeCardContainer=styled.div`
         box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%);
         cursor: pointer;
     }
-    ${mobile({ height:'340px',maxWidth:'175px',margin:'2px',boxShadow:'none',padding:'2px'})}
+    ${mobile({ height:'300px',maxWidth:'150px',margin:'2px',boxShadow:'none',padding:'2px'})}
 `
 
 

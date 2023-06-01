@@ -23,7 +23,7 @@ const Profile = () => {
       {savedRecipes?.length>0 ? (<SubTitle>My Saved List</SubTitle>): 
       (
       <>
-      <h2 style={{color:'#5A5A5A',margin:'60px 20px'}}>Your List Is empty</h2>
+      <h3 style={{color:'#5A5A5A',margin:'60px 20px'}}>Your List Is empty</h3>
      <BackButton onClick={()=>{navigate('/')}}>Back To Recipes</BackButton> 
       </>)}
     <Container>

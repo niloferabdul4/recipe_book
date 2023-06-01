@@ -15,7 +15,7 @@ const SavedRecipes = () => {
        {savedRecipes?.length>0 ? (<SubTitle>Saved Recipes</SubTitle>): 
        (
         <>
-         <h2 style={{color:'#5A5A5A',margin:'50px'}}>No Recipies To Show</h2>
+         <h3 style={{color:'#5A5A5A',margin:'50px'}}>No Recipies To Show</h3>
         <BackButton onClick={()=>{navigate('/')}}>Back To Recipes</BackButton> 
         </>
       )}

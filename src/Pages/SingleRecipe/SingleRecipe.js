@@ -41,8 +41,7 @@ const SingleRecipe = () => {
                         <Span >
                           <p>Category: {singleRecipe[0]?.strCategory}</p>
                      
-                          <p>Cuisine: {singleRecipe[0]?.strArea}</p>
-                       
+                          <p>Cuisine: {singleRecipe[0]?.strArea}</p>                       
                          
                         </Span>
                         <Ingredients> Ingredients:
@@ -57,7 +56,7 @@ const SingleRecipe = () => {
                           </ul>
                        
                         </Ingredients>
-                        <Description><strong style={{fontSize:'20px'}}>Description: </strong>{singleRecipe[0]?.strInstructions}</Description>    
+                        <Description><strong >Description: </strong>{singleRecipe[0]?.strInstructions}</Description>    
                         <Source>Source: {singleRecipe[0]?.strSource}</Source>  
                         <SaveBtn onClick={saveRecipe}>Save The Recipe</SaveBtn>              
                  </InfoContainer> 

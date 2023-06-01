@@ -15,6 +15,7 @@ const BannerContainer=styled.div `
     flex-direction:column;
     justify-content:center;
     align-items:center;
+   
     h1{
         color:white;
     }
@@ -36,7 +37,7 @@ const Form=styled.form`
     gap:5px;
     z-index:100;
     box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%); 
-    ${mobile({ width:'400px',margin:'40px',padding:'10px'})}
+    ${mobile({ width:'355px',margin:'10px 0px',padding:'20px',height:'500px',gap:'5px'})}
   `
 const Top=styled.div`
     display:flex;
@@ -57,7 +58,7 @@ const Bottom=styled.div`
     align-items:flex-start;
     padding:8px;
     width:100%;
-    ${mobile({ padding:'4px',flexDirection:'row',alignItems:'center',justifyContent:'center'})}
+    ${mobile({ padding:'5px',flexDirection:'row',alignItems:'center',justifyContent:'space-between'})}
    
   `
 
@@ -78,13 +79,13 @@ const Bottom=styled.div`
   outline:none;
   box-shadow:0px 2px 4px rgba(0,0,0,0.3)
  }
- ${mobile({ padding:'8px',margin:'0px'})}
+ ${mobile({ padding:'8px',margin:'0px',width:'60%'})}
   `
 const FilterOption=styled.option`
     marging:18px;
     padding:18px;
     height:100px;
-    ${mobile({ padding:'8px',margin:'4px'})}
+    ${mobile({ padding:'7px',margin:'4px'})}
 
 `
   const Input=styled.input`
@@ -94,7 +95,8 @@ const FilterOption=styled.option`
     margin: 10px;
     width:100%;
     border-radius: 5px;
-    ${mobile({ margin:'0px',padding:'8px'})}
+    text-indent:'3px';
+    ${mobile({ padding:'8px',margin:'0px',width:'80%'})}
   
   `
   const SearchButton=styled.button`
@@ -110,17 +112,17 @@ const FilterOption=styled.option`
     top:20px;
     right:-5px;
     cursor:pointer;
-    ${mobile({height:'20px',padding:'6px'})}
+    ${mobile({height:'20px',padding:'6px',right:'-10px',top:'10px'})}
 `
  const Label=styled.label`
     font-size: 16px;
     margin:10px;
-    ${mobile({ margin:'8px',fontSize:'14px'})}
+    ${mobile({ margin:'10px',fontSize:'14px'})}
  `
 
 const Title=styled.h1`
     margin:50px;
-    ${mobile({ fontSize:'24px',margin:'10px'})}
+    ${mobile({ fontSize:'24px',margin:'30px'})}
 `
 
 const Button=styled.button`
@@ -132,7 +134,7 @@ const Button=styled.button`
     background-color: orangered;
     color:white;
     cursor:pointer;
-    ${mobile({ height:'35px',fontSize:'0.96rem',width:'100px'})}
+    ${mobile({ height:'30px',fontSize:'0.94rem',width:'100px'})}
 `
 
 
@@ -144,12 +146,12 @@ const SearchBox=styled.div`
         justify-content:flex-start;
         ${mobile({
         height:'24px',    
-
+       
     })}
 `
 const SubTitle=styled.h2`
     margin:30px;
-    ${mobile({ fontSize:'18px',margin:'10px'})}
+    ${mobile({ fontSize:'18px',margin:'20px'})}
 `
 
 

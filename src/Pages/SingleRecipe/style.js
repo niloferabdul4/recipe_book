@@ -18,7 +18,7 @@ export const ImageContainer=styled.div`
         max-height: 100vh;
         display: flex;
         justify-content: center; 
-        ${mobile({ maxHeight:'250px',padding:'10px'})}       
+        ${mobile({ maxHeight:'250px',padding:'5px'})}       
 `
 
 export const Image=styled.img`
@@ -65,9 +65,11 @@ export const Ingredients=styled.div`
            font-weight:400;
            margin-top:10px;
            font-size:18px;
+           ${mobile({ fontSize:'15px'})} 
         }
         li{
            list-style-type:none;
+           
 
         }
         ${mobile({ fontSize:'16px'})}             
@@ -81,7 +83,7 @@ export const Source=styled.div`
         padding:10px 0px; 
         margin-bottom: 20px;
         color:orangered;
-        ${mobile({ fontSize:'16px'})}             
+        ${mobile({ fontSize:'15px'})}             
 `
 
 
@@ -99,7 +101,7 @@ export const Span=styled.div`
         padding-right:20px;
       }
        
-        ${mobile({ fontSize:'16px'})}             
+        ${mobile({ fontSize:'15px',width:'100%'})}             
 `
 
 export const SaveBtn=styled.button`
@@ -111,4 +113,6 @@ export const SaveBtn=styled.button`
          border-radius:8px;
          font-weight:600;
          cursor:pointer;
+         border:none;
+         ${mobile({ height:'50px',fontSize:'0.96rem',paddin:'4px'})}
 `

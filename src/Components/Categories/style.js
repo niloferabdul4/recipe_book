@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { mobile } from "../../Responsive";
 
 export const CategoryContainer=styled.div`
-       
-        
         margin:50px 100px;;
         border-radius: 3px;
         display:grid;
@@ -11,8 +9,11 @@ export const CategoryContainer=styled.div`
         grid-gap:50px;
         ${mobile({
         display:'grid',
-        gridTemplateColumns:'repeat(5,1fr)',
-        padding:'10px'
+        gridTemplateColumns:'repeat(3,1fr)',
+        gridGap:'10px',
+        padding:'0px',
+        margin:'0px'
+
     })}
  
 
@@ -42,8 +43,10 @@ export const Span=styled.span`
             transition:transform 0.8s ease;
         }
         ${mobile({
-      margin:'2px'
-
+        margin:'1px',
+        height:'120px',
+        width:'100px',
+        
     })}
 
 `

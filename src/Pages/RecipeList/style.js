@@ -8,7 +8,7 @@ export const Container=styled.div`
     grid-gap:50px;
     z-index: 1;   
     margin:60px 120px;    
-    
+    ${mobile({ margin:'30px 6px',gridGap:'10px'})}  
     
 `
 
@@ -26,18 +26,18 @@ export const Card=styled.div`
     width:360px;
     max-width: 400px;  
     color:rgba(0,0,0,0.7)
-  cursor:pointer;
+    cursor:pointer;
     position:relative;
     box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%); 
     
-    ${mobile({ flexDirection:'row',maxHeight:'260px',maxWidth:'360px',margin:'0px',marginBottom:'10px',boxShadow:'none',padding:'0px'})}
+    ${mobile({ flexDirection:'row',maxHeight:'240px',maxWidth:'360px',margin:'0px',marginBottom:'10px',padding:'0px'})}
 `
 
 export const Image=styled.img`
     object-fit: cover;
     width:100%;
     height:50%;   
-    ${mobile({ width:'140px',height:'180px',marginBottom:'10px'})}
+    ${mobile({ width:'100%',height:'180px',marginBottom:'10px'})}
     `
 
 
@@ -85,8 +85,8 @@ export const Span =styled.div`
     right:10px;
     background-color:green;
     color:white;
-    opacity:0.8;
-   
+    opacity:0.7;
+    ${mobile({display:'none'})}  
   `
 
 

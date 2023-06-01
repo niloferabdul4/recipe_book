@@ -10,7 +10,7 @@ const FilteredRecipes= () => {
   return (
     <>
     
-    {filteredItems?.length>0 ? (<SubTitle>Filtered Recipes</SubTitle>): (<h2 style={{color:'#5A5A5A',margin:'50px'}}>No Recipes To Show</h2>)}
+    {filteredItems?.length>0 ? (<SubTitle>Filtered Recipes</SubTitle>): (<h3 style={{color:'#5A5A5A',margin:'50px'}}>No Recipes To Show</h3>)}
     <Container>
       {filteredItems?.map(item=>{return <RecipeCard key={item.idMeal}   recipe={item} />})}
     </Container>
