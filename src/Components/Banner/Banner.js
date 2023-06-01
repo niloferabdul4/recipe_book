@@ -39,7 +39,7 @@ const searchItem=async()=>
     return (
         <>
         <BannerContainer>            
-          <SubTitle>Search the yummy recipes here..</SubTitle> 
+          <SubTitle id='banner'>Search the yummy recipes here..</SubTitle> 
           <Form onSubmit={applyFilters}>
             <Top>
             

@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { mobile } from "../../Responsive";
 import img from '../../assets/banner_image.jpg'
 const BannerContainer=styled.div `  
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(img) ;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(img) ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
     width: 100%;
-    height:70vh; 
+    height:60vh; 
     padding:10px 0px;
     z-index:1;
     margin-bottom:50px; 
@@ -35,7 +35,7 @@ const Form=styled.form`
     display:flex;
     flex-direction:column;
     gap:5px;
-    z-index:100;
+    z-index:10;
     box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%); 
     ${mobile({ width:'355px',margin:'10px 0px',padding:'20px',height:'500px',gap:'5px'})}
   `
@@ -151,7 +151,8 @@ const SearchBox=styled.div`
 `
 const SubTitle=styled.h2`
     margin:30px;
-    ${mobile({ fontSize:'18px',margin:'20px'})}
+    color:${props=>props.id==='banner'? 'white' :'black'}
+    ${mobile({ fontSize:'18px',margin:'22px'})}
 `
 
 
