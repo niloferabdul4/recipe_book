@@ -29,7 +29,7 @@ const applyFilters=async(event)=>
 const searchItem=async()=>
 { 
   
-  const filteredItems=recipes.filter(item=>item.strMeal.toLowerCase().includes(searchText.toLowerCase()) )
+  const filteredItems=recipes.filter(item=>item.strMeal.toLowerCase().includes(searchText.toLowerCase()) || item.strInstructions.toLowerCase().includes(searchText.toLowerCase())  )
   console.log(filteredItems)
   dispatch({type:'FILTERED_RECIPES',payload:filteredItems})
   navigate('/recipe')
@@ -61,7 +61,7 @@ const searchItem=async()=>
             <Bottom>
            <Button type='submit'>Apply Filters</Button>
            <SearchBox > 
-                <Label> Search By Name</Label>  
+                <Label> Search By Name / Ingredients</Label>  
                 <span style={{display:'flex',flexDirection:'row',width:'80%',position:'relative'}}>                                  
                 <Input type='search' id='search' value={searchText}  onChange={(event)=>dispatch({type:'SEARCH_TEXT',payload:event.target.value})} />
                 <SearchButton onClick={searchItem}>
