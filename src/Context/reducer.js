@@ -13,8 +13,6 @@ const reducer=(state,action)=>{
             return {...state,selectedCategory:action.payload}
         case 'SELECT_CUISINE':
                 return {...state,selectedCuisine:action.payload}
-        case 'ADD_NAME':
-                return {...state,recipeName:action.payload}
         case 'SEARCH_TEXT':
                 return {...state,searchText:action.payload}
         case 'FILTERED_RECIPES':
@@ -27,8 +25,8 @@ const reducer=(state,action)=>{
             return {...state,savedRecipes:[...state.savedRecipes]}
         case 'SET_USER':
             return {...state,user:action.payload}
-
-        case 'OPEN_SIDEBAR':
+       
+        case 'SHOW_MENUBAR':
             return {...state,menuOpen:!state.menuOpen}
         case 'default':
             return {...state}

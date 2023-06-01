@@ -6,22 +6,22 @@ import auth from '../Firebase/Firebase'
 export const AppContext=createContext()
 
 const AppContextProvider = ({children}) => {
-    const [user,setUser]=useState('')
-    const [menuOpen,setMenuOpen]=useState(false)
+   
     useEffect(()=>{
 
         fetchRecipes();
         fetchCategories();
-    
+        getUser()
     },[])
 
     const fetchRecipes=async ()=>{
         try{
             const recipes= await axios.get(' https://www.themealdb.com/api/json/v1/1/search.php?s=')
-            console.log(recipes)
-            dispatch({type:'LOAD_RECIPES',payload:recipes.data.meals
-        })
+           
+            dispatch({type:'LOAD_RECIPES',payload:recipes.data.meals})
+           
         }
+        
         catch(error)
         {
            console.log(error.message)
@@ -38,7 +38,7 @@ const AppContextProvider = ({children}) => {
         console.log(error.message)
       }
     }
-/*
+  
     const getUser=()=>{
       onAuthStateChanged(auth,authUser=>{
         if(authUser)
@@ -51,38 +51,23 @@ const AppContextProvider = ({children}) => {
         }
       })
     }
-  */
  
-    useEffect(()=>{
-      const user=onAuthStateChanged(auth,(user)=>{
-      if(user)
-      {
-        setUser({email:user.email,displayName:user.displayName})
-      }
-      else
-      {
-        setUser(null)
-      }
-  
-      })
-      return ()=>user
-    },[])  
-
     const initialState={recipes:[],
                         recipeByCategory:[],
                         categories:[],
                         selectedCategory:'',
                         selectedCuisine:'', 
                         searchText:'',
-                        recipeName:'',
                         filteredItems:[],
-                        savedRecipes:[]
+                        savedRecipes:[],
+                        user:{},
+                        menuOpen:false
                        }
 
     const [state,dispatch]=useReducer(reducer,initialState)
   return (
     <>
-      <AppContext.Provider value={{state,dispatch,user,menuOpen,setMenuOpen}}>
+      <AppContext.Provider value={{state,dispatch}}>
         {children}
       </AppContext.Provider>
     </>

@@ -10,7 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 const Header = () => {
     const navigate=useNavigate()
-    const {setMenuOpen,user,dispatch}=useContext(AppContext)
+    const {state:{user},dispatch}=useContext(AppContext)
    
     const lists=[{id:1,title:'Home',path:'/'},
                  {id:2,title:'Saved Recipes' ,path:'/savedRecipes'},
@@ -45,7 +45,7 @@ const logoutFn=()=>{
                     :
                     (<Links  to='/login' onClick={logoutFn}>Logout</Links>)
                    }  
-                    <MenuIcon   style={{cursor:'pointer'}} onClick={()=>setMenuOpen(menuOpen=>!menuOpen)}/>    
+                    <MenuIcon   style={{cursor:'pointer'}} onClick={()=>dispatch({type:'SHOW_MENUBAR'})}/>    
               </RightWrapper>      
       </HeaderContainer>    
     </>

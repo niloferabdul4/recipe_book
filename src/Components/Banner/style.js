@@ -7,7 +7,7 @@ const BannerContainer=styled.div `
     background-position: center;
     background-size: cover; 
     width: 100%;
-    height:60vh; 
+    height:70vh; 
     padding:10px 0px;
     z-index:1;
     margin-bottom:50px; 
@@ -90,27 +90,26 @@ const FilterOption=styled.option`
   const Input=styled.input`
     font-size: 16px;
     padding: 10px;
-    border: ${props=>props.id=='search'? 'none' : '1px solid rgba(128, 128, 128, 0.2)'};
+    border:1px solid rgba(128, 128, 128, 0.2);
     margin: 10px;
     width:100%;
     border-radius: 5px;
-    position:relative;
     ${mobile({ margin:'0px',padding:'8px'})}
   
   `
   const SearchButton=styled.button`
-    width:50%;
     margin:0px 30px;
-    color:#2874f0;
+    color:orangered;
     padding:0px;
     display: flex;
     flex-direction:row;
     align-items:center;
-    border:1px solid rgba(128, 128, 128, 0.2);
     background-color:white;
-    &:focus{
-      boder:none;
-    }
+    border:none;
+    position:absolute;
+    top:20px;
+    right:-5px;
+    cursor:pointer;
     ${mobile({height:'20px',padding:'6px'})}
 `
  const Label=styled.label`
@@ -130,18 +129,30 @@ const Button=styled.button`
     font-size:1.1rem;
     border:none;
     border-radius:8px;
-    background-color:  #2874f0;
+    background-color: orangered;
     color:white;
     cursor:pointer;
     ${mobile({ height:'35px',fontSize:'0.96rem',width:'100px'})}
 `
+
+
+const SearchBox=styled.div`       
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content:flex-start;
+        ${mobile({
+        height:'24px',    
+
+    })}
+`
 const SubTitle=styled.h2`
     margin:30px;
-    color:white;
     ${mobile({ fontSize:'18px',margin:'10px'})}
 `
 
 
 
-export {BannerContainer,Form,Top,Bottom,FilterBox,FilterOption,Select,Input,Label,Button,Title,SubTitle,SearchButton}
+export {BannerContainer,Form,Top,Bottom,FilterBox,FilterOption,Select,Input,Label,Button,Title,SubTitle,SearchButton,SearchBox}
 

@@ -16,7 +16,7 @@ import FilteredRecipes from './Pages/FilteredRecipes/FilteredRecipes';
 
 
 function App() {
-  const {user}=useContext(AppContext)
+  const {state:{user}}=useContext(AppContext)
   return (
     <div className="App">
         <Header/>

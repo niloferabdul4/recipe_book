@@ -10,14 +10,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Featured = () => {
- const {state:{recipes},dispatch}=useContext(AppContext)
+ const {state:{recipes}}=useContext(AppContext)
 
 
   return (
     <>
     <SubTitle>Popular Recipes</SubTitle>
     <FeaturedContainer>
-     
      <Slider {...settings} >        
      {recipes?.map(item=>{return <FeaturedCard key={item.idmeal} recipe={item}/>})}
      </Slider>

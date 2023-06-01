@@ -4,12 +4,14 @@ import { AppContext } from '../../Context/AppContextProvider'
 import { Container,ImageContainer,Image,InfoContainer,Title,Description,Ingredients,Span,Source,SaveBtn} from './style'
 const SingleRecipe = () => {
   const [singleRecipe,setSingleRecipe]=useState({})
+  
   const {state:{recipes},dispatch}=useContext(AppContext)
   const {id}=useParams()
   const navigate=useNavigate()
 
   useEffect(()=>{
     id && getRecipeDetails()
+ 
   },[id])
 
 
@@ -17,6 +19,7 @@ const SingleRecipe = () => {
    {
     const singleRecipe=recipes.filter(item=>item.idMeal===id)
     setSingleRecipe(singleRecipe)
+  
     }
 
   const saveRecipe=()=>{
@@ -24,6 +27,8 @@ const SingleRecipe = () => {
     dispatch({type:'SAVE_THE_RECIPE',payload:singleRecipe[0]})
     navigate(`/savedRecipes`)
   }
+
+
   return (
     <div>
        <Container  >                 
@@ -48,6 +53,7 @@ const SingleRecipe = () => {
                               <li>{singleRecipe[0]?.strIngredient4}: {singleRecipe[0]?.strMeasure4}</li>
                               <li>{singleRecipe[0]?.strIngredient5}: {singleRecipe[0]?.strMeasure5}</li>
                               <li>{singleRecipe[0]?.strIngredient6}: {singleRecipe[0]?.strMeasure6}</li>
+                          
                           </ul>
                        
                         </Ingredients>

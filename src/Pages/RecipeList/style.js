@@ -26,7 +26,7 @@ export const Card=styled.div`
     width:360px;
     max-width: 400px;  
     color:rgba(0,0,0,0.7)
-    cursor:pointer; 
+  cursor:pointer;
     position:relative;
     box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%); 
     

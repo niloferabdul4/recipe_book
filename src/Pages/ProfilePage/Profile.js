@@ -7,7 +7,7 @@ import { ProfileContainer,ProfileHeader,Image,UserInfo,Container,BackButton} fro
 
 
 const Profile = () => {
-  const {state:{savedRecipes},user}=useContext(AppContext)
+  const {state:{savedRecipes,user}}=useContext(AppContext)
   const navigate=useNavigate()
 
   return (
