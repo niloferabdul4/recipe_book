@@ -65,7 +65,7 @@ const validate=(formData)=>
                <Title>Create Acccount</Title>
                <Form onSubmit={handleSubmit}>
                         <InputWrapper>
-                                <Label htmlFor='name'>Email</Label>
+                                <Label htmlFor='name'>Name</Label>
                                 <Input type='text'
                                         id='name'
                                         placeholder='Name'
